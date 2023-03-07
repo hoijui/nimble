@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Generate STLs
         run: |
+          pwd
+          ls
           for i in src/mech/freecad/*.FCStd; do
             python3 src/mech/freecad/freecad_to_stl.py $i gen/mech/freecad/`basename $i`.stl
           done
