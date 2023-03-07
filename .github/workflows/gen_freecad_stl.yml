@@ -14,8 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     container: amrit3701/freecad-cli:latest
     steps:
+      - name: "Check out the repo"
+        uses: actions/checkout@v3
+
       - name: Generate STLs
-        run: |
+        kun: |
           pwd
           ls
           for i in src/mech/freecad/*.FCStd; do
