@@ -11,6 +11,7 @@ on:
 jobs:
   gen_freecad_stls:
     name: Generate STLs
+    runs-on: ubuntu-latest
     container: amrit3701/freecad-cli:latest
     steps:
       - name: Generate STLs
