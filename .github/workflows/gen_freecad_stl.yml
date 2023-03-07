@@ -21,6 +21,7 @@ jobs:
         run: |
           pwd
           ls
+          mkdir gen/mech/freecad
           for i in src/mech/freecad/*.FCStd; do
             python3 src/mech/freecad/freecad_to_stl.py $i gen/mech/freecad/`basename $i`.stl
           done
