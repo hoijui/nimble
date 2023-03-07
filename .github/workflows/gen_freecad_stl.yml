@@ -20,7 +20,7 @@ jobs:
           submodules: true
 
       - name: Generate STLs
-        kun: |
+        run: |
           pwd
           ls
           for i in src/mech/freecad/*.FCStd; do
