@@ -24,6 +24,7 @@ jobs:
           for i in src/mech/freecad/*.FCStd; do
             python3 src/mech/freecad/freecad_to_stl.py $i gen/mech/freecad/`basename $i`.stl
           done
+          ls gen/mech/freecad/
       - name: Upload STLs
         uses: actions/upload-artifact@v3
         with:
